@@ -1,0 +1,101 @@
+{
+  "resources": [
+    {
+      "resource": "Condition",
+      "shardKey": ["subject"],
+      "indexes": [
+        {
+          "parameters": ["code", "recorded-date"],
+          "description": "Index to speed up search with condition code (and optionally recorded date) by cursor based pagination"
+        }
+      ]
+    },
+    {
+      "resource": "Consent",
+      "shardKey": ["patient"],
+      "indexes": [
+        {
+          "parameters": ["mii-provision-provision-code"],
+          "description": "Index to speed up search with provision code by cursor based pagination"
+        }
+      ]
+    },
+    {
+      "resource": "Encounter",
+      "shardKey": ["subject"],
+      "indexes": []
+    },
+    {
+      "resource": "Medication",
+      "indexes": [
+        {
+          "parameters": ["code"],
+          "description": "Index to speed up search with medication code"
+        }
+      ]
+    },
+    {
+      "resource": "MedicationAdministration",
+      "shardKey": ["subject"],
+      "indexes": [
+        {
+          "parameters": ["medication", "effective-time"],
+          "description": "Index to speed up search with medication reference(and optionally with date) by cursor based pagination"
+        }
+      ]
+    },
+    {
+      "resource": "Observation",
+      "shardKey": ["subject"],
+      "indexes": [
+        {
+          "parameters": ["code", "value-quantity"],
+          "description": "Index to speed up search with observation code (and optionally with value) by cursor based pagination"
+        },
+        {
+          "parameters": ["code", "date"],
+          "description": "Index to speed up search with observation code (and optionally with date) by cursor based pagination"
+        }
+      ]
+    },
+    {
+      "resource": "Patient",
+      "shardKey": ["_id"],
+      "indexes": [
+        {
+          "parameters": ["gender", "__id"],
+          "description": "Index to speed up search with gender by cursor based pagination"
+        },
+        {
+          "parameters": ["birthdate", "__id"],
+          "description": "Index to speed up search with birthdate by cursor based pagination"
+        }
+      ]
+    },
+    {
+      "resource": "Practitioner",
+      "indexes": []
+    },
+    {
+      "resource": "Procedure",
+      "shardKey": ["subject"],
+      "indexes": [
+        {
+          "parameters": ["code", "date"],
+          "description": "Index to speed up search with procedure code (and optionally date) by cursor based pagination"
+        }
+      ]
+    },
+    {
+      "resource": "Specimen",
+      "shardKey": ["patient"],
+      "indexes": [
+        {
+          "parameters": ["type", "collected"],
+          "description": "Index to speed up search with specimen type (and optionally with collected date) by cursor based pagination"
+        }
+      ]
+    }
+
+  ]
+}

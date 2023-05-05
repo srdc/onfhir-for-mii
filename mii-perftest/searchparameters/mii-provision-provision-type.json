@@ -1,0 +1,14 @@
+{
+      "resourceType": "SearchParameter",
+      "id": "mii-provision-provision-type",
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-consent/SearchParameter/mii-sp-consent-provisiontype",
+      "version": "1.0.3",
+      "name": "MII_SP_Consent_ProvisionType",
+      "status": "active",
+      "date": "2023-03-08",
+      "description": "Suche im Typ (type) der Provison",
+      "code": "mii-provision-provision-type",
+      "base": ["Consent"],
+      "type": "token",
+      "expression": "Consent.provision.provision.type"
+}

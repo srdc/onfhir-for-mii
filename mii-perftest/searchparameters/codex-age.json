@@ -1,0 +1,13 @@
+{
+      "resourceType": "SearchParameter",
+      "id": "codex-age",
+      "url": "http://codex.de/age",
+      "version": "0.1.0",
+      "name": "codex-age",
+      "status": "active",
+      "description": "codex age",
+      "code": "codex-age",
+      "base": ["Patient"],
+      "type": "quantity",
+      "expression": "Patient.extension.where(url='https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/age').extension.where(url='age').value"
+}

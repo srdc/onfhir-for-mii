@@ -1,0 +1,13 @@
+{
+      "resourceType": "SearchParameter",
+      "id": "codex-ethnicity",
+      "url": "http://codex.de/ethnicity",
+      "version": "0.1.0",
+      "name": "codex-ethnicity",
+      "status": "active",
+      "description": "codex ethnicity",
+      "code": "codex-ethnicity",
+      "base": ["Patient"],
+      "type": "token",
+      "expression": "Patient.extension.where(url='https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/ethnic-group').value"
+    }
