@@ -25,6 +25,12 @@ performance test setup where the configurations are given in folder 'mii-perftes
       - ./mii-perftest:/usr/local/onfhir/conf
 ```
 
+You can then run the following command to pull the latest version of onfhir and mongodb images.
+
+```
+docker-compose pull
+```
+
 Then you can run the following command which will start two containers; one MongoDB container providing the database 
 another one onFhir container providing the FHIR server. 
 ```
